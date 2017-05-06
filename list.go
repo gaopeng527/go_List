@@ -9,6 +9,7 @@ type List interface {
 	Contains(e interface{}) bool
 	Len() int
 	Elements() []interface{}
+	Get(index int) interface{}
 	String() string
 }
 
