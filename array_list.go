@@ -77,6 +77,13 @@ func (list *ArrayList) Elements() []interface{} {
 	return snapshot
 }
 
+func (list *ArrayList) Get(index int) interface{} {
+	if index < 0 || index >= list.Len() {
+		return nil
+	}
+	return list.a[index]
+}
+
 // 获取ArrayList自身字符串表示形式
 func (list *ArrayList) String() string {
 	var buf bytes.Buffer
